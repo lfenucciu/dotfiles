@@ -1,0 +1,9 @@
+*~
+*.bak
+*.swp
+
+# Ignoriere Caches und Logs
+*/cache/
+*/log/
+
+spicetify/Backup/

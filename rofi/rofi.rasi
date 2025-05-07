@@ -1,0 +1,125 @@
+/* Rofi Modern Theme - Anime Dark Style */
+configuration {
+    modi: "drun,run,window,ssh";
+    font: "JetBrainsMono Nerd Font 12";
+    show-icons: true;
+    icon-theme: "Papirus-Dark";
+    terminal: "kitty";
+    drun-display-format: "{icon} {name}";
+    display-drun: "";
+    display-run: "Run";
+    display-window: "Windows";
+    display-ssh: "SSH";
+}
+
+* {
+    background-color: #00000066;
+    background: #00000066;
+    foreground: #f8f8f2;
+    selected-background: #bd93f960;
+    selected-foreground: #ffffff;
+    border-color: #00000000;
+    spacing: 2;
+    transparent: #00000000;
+}
+
+window {
+    background-color: @background;
+    border: 0;
+    border-radius: 12px;
+    padding: 12;
+    width: 45%;
+    height: 40%;
+    transparency: "real";
+    blur: true;
+}
+
+mainbox {
+    border: 0;
+    padding: 0;
+    background-color: @transparent;
+}
+
+inputbar {
+    children: [prompt, entry];
+    background-color: @transparent;
+    border-radius: 8px;
+    padding: 8px;
+    margin: 0 0 8px 0;
+}
+
+prompt {
+    background-color: @transparent;
+    text-color: @foreground;
+    enabled: true;
+    padding: 0 8px 0 0;
+}
+
+entry {
+    background-color: @transparent;
+    text-color: @foreground;
+    placeholder-color: #cccccc80;
+    placeholder: "Suche...";
+}
+
+listview {
+    background-color: @transparent;
+    border: 0;
+    padding: 0;
+    columns: 1;
+    lines: 8;
+    spacing: 8px;
+    cycle: true;
+    dynamic: true;
+    layout: vertical;
+    scrollbar: false;
+}
+
+element {
+    background-color: @transparent;
+    text-color: @foreground;
+    orientation: horizontal;
+    border-radius: 8px;
+    padding: 8px;
+}
+
+element-icon {
+    background-color: @transparent;
+    text-color: inherit;
+    size: 24px;
+    padding: 0 10px 0 0;
+}
+
+element-text {
+    background-color: @transparent;
+    text-color: inherit;
+    vertical-align: 0.5;
+    horizontal-align: 0.0;
+}
+
+element selected {
+    background-color: @selected-background;
+    text-color: @selected-foreground;
+    border: 0;
+    border-radius: 8px;
+    border-color: @border-color;
+}
+
+mode-switcher {
+    spacing: 10px;
+}
+
+button {
+    padding: 8px;
+    background-color: @background;
+    text-color: @foreground;
+    vertical-align: 0.5;
+    horizontal-align: 0.5;
+    border-radius: 8px;
+}
+
+button selected {
+    background-color: @selected-background;
+    text-color: @selected-foreground;
+    border: 0;
+}

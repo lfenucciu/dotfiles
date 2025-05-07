@@ -1,0 +1,82 @@
+* {
+  border: none;
+  border-radius: 10px;
+  font-family: "JetBrainsMono Nerd Font", monospace;
+  font-size: 13px;
+  min-height: 0;
+  padding: 0;
+}
+
+window#waybar {
+  background: rgba(10, 10, 10, 0.6);
+  color: #e0e0e0;
+  margin: 0 10px;
+  padding: 0 10px;
+  box-shadow: none;
+  border-radius: 0; /* wichtig: keine Rundung der Leiste selbst */
+}
+
+#workspaces {
+  margin: 0 6px;
+}
+
+#workspaces button {
+  padding: 4px 10px;
+  margin: 0 4px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #aaa;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+#workspaces button.active {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+}
+
+#workspaces button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ddd;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#temperature,
+#network,
+#pulseaudio,
+#backlight {
+  padding: 4px 10px;
+  margin: 0 6px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  color: #dcdcdc;
+}
+
+#battery.warning {
+  color: #ffcc00;
+}
+
+#battery.critical {
+  color: #ff5555;
+}
+
+#pulseaudio.muted {
+  color: #888888;
+}
+
+tooltip {
+  background: rgba(30, 30, 30, 0.95);
+  border-radius: 8px;
+  padding: 6px;
+  color: #e0e0e0;
+  font-size: 12px;
+}
+
+/* ➤ Fix: rechte Kante soll nicht rund sein */
+.modules-right > *:last-child {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  margin-right: 0;
+}

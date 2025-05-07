@@ -59,7 +59,7 @@ entry {
     background-color: @transparent;
     text-color: @foreground;
     placeholder-color: #cccccc80;
-    placeholder: "Suche...";
+    placeholder: "Search...";
 }
 
 listview {
